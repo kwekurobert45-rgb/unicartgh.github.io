@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UniCart GH – Your Campus Plug</title>
+<link rel="icon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#"><img src="assets/logo.svg" alt="" width="34" height="34"><span>UniCart GH</span></a>
+  <div class="search">
+    <input id="q" type="search" placeholder="Search thrift, sneakers, laptops, graphic design, data bundles..." aria-label="Search listings">
+    <select id="campus" aria-label="Campus"><option>All Campuses</option><option>UPSA</option><option>UG Legon</option><option>KNUST</option><option>UCC</option><option>GIMPA</option></select>
+  </div>
+  <div class="nav-r">
+    <button class="btn lime" id="openPost">+ Post Item</button>
+    <button class="icon-btn" id="openSaved" aria-label="Saved items">♥<span class="count" id="savedCount">0</span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Your Campus Plug for Everything.</h1>
+  <p>Buy, sell, and book trusted student vendors on your campus. Zero middleman fees—chat directly on WhatsApp.</p>
+  <div class="hero-cta"><a class="btn lime" href="#listings">Browse Listings</a><button class="btn white" id="heroPost">List Your Hustle</button></div>
+</section>
+
+<main id="listings">
+  <div class="pills" id="pills"></div>
+  <div class="filters">
+    <select id="fLoc" aria-label="Location"><option value="">Any hostel / location</option></select>
+    <select id="fType" aria-label="Listing type"><option value="">All types</option><option>Physical Product</option><option>Student Service</option></select>
+    <select id="fCond" aria-label="Condition"><option value="">Any condition</option><option>Brand New</option><option>Neatly Used</option><option>Service/Booking</option></select>
+    <select id="sort" aria-label="Sort"><option value="new">Newest</option><option value="lo">Price: Low to High</option><option value="hi">Price: High to Low</option></select>
+  </div>
+  <p class="result-count" id="resultCount"></p>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer class="footer">
+  <div><strong class="flogo">UniCart<span>GH</span></strong><p>Built for Campus Entrepreneurs.</p></div>
+  <div><h4>Campus safety</h4><p>Meet in public campus spots before paying. Inspect items first. Never send money to someone you haven't met.</p></div>
+  <div><h4>Quick links</h4><a href="#listings">Browse</a><a href="#" id="fPost">Post an item</a><a href="#" id="fSaved">Saved items</a></div>
+</footer>
+
+<div class="overlay" id="overlay" hidden></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" hidden></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
